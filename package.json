@@ -1,0 +1,15 @@
+{
+  "name": "weather_project",
+  "version": "1.0.0",
+  "description": "this a web application about weather report of a city",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jay sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0"
+  }
+}

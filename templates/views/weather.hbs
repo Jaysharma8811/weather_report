@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Weather</title>
+{{>headerlinks}}
+<script src="https://kit.fontawesome.com/5837e9894d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <!--  navbar -->
+   {{>navbar}}
+   {{!-- main_header --}}
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto ">
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityName" placeholder="Enter Your city name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+                <div class="tempinfo">
+                    <div class="top_layer">
+                        <p id="day">Tue</p>
+                        <p id="tdate">13 OCT</p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get your output here</p>
+                        <div class="mid_layer data_hide">
+                            <p id="temp"><span id="temp_real">0</span><sup>o</sup>C </p>
+                            <p  id="temp_status"><i class="fa-solid fa-sun"></i></p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    {{!-- footer --}}
+    {{>footer}}
+        
+    <script src="js/main.js"></script>
+    <script>
+
+    var today= new Date();
+    var weekdays=new Array(7);
+    weekdays[0] ="Sun";
+    weekdays[1] ="Mon";
+    weekdays[2] ="Tue";
+    weekdays[3] ="Wed";
+    weekdays[4] ="Thu";
+    weekdays[5] ="Fri";
+    weekdays[6] ="Sat";
+
+    var months=new Array(12);
+    months[0] = "JAN";
+    months[1] = "FEB";
+    months[2] = "MAR";
+    months[3] = "APR";
+    months[4] = "MAY";
+    months[5] = "JUN";
+    months[6] = "JUL";
+    months[7] = "AUG";
+    months[8] = "SEP";
+    months[9] = "OCT";
+    months[10] = "NOV";
+    months[11] = "DEC";
+    var day = weekdays[today.getDay()];
+   var date = today.getDate()+' '+months[today.getMonth()];
+   
+    document.getElementById("day").innerText = day;
+    document.getElementById("tdate").innerHTML =date;
+    </script>
+</body>
+
+</html>
